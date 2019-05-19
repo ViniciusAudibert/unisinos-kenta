@@ -17,7 +17,7 @@ import java.util.Set;
 @AllArgsConstructor
 @Builder
 @Entity
-public class Event {
+public class Category {
 
 	@Id
 	@GeneratedValue
