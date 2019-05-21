@@ -11,7 +11,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Optional;
-import com.br.kenta.model.Ticket;
+import com.br.kenta.model.Chamado;
 import com.br.kenta.repository.TicketRepository;
 
 @RestController
@@ -26,29 +26,29 @@ class GroupController {
 	}
 
 	@GetMapping("/groups")
-	Collection<Ticket> groups() {
+	Collection<Chamado> groups() {
 		return groupRepository.findAll();
 	}
 
 	@GetMapping("/group/{id}")
 	ResponseEntity<?> getGroup(@PathVariable Long id) {
-		Optional<Ticket> group = groupRepository.findById(id);
+		Optional<Chamado> group = groupRepository.findById(id);
 		return group.map(response -> ResponseEntity.ok().body(response))
 				.orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
 	}
 
 	@PostMapping("/group")
-	ResponseEntity<Ticket> createGroup(@Valid @RequestBody Ticket group) throws URISyntaxException {
+	ResponseEntity<Chamado> createGroup(@Valid @RequestBody Chamado group) throws URISyntaxException {
 		log.info("Request to create group: {}", group);
-		Ticket result = groupRepository.save(group);
+		Chamado result = groupRepository.save(group);
 		return ResponseEntity.created(new URI("/api/group/" + result.getId()))
 				.body(result);
 	}
 
 	@PutMapping("/group/{id}")
-	ResponseEntity<Ticket> updateGroup(@Valid @RequestBody Ticket group) {
+	ResponseEntity<Chamado> updateGroup(@Valid @RequestBody Chamado group) {
 		log.info("Request to update group: {}", group);
-		Ticket result = groupRepository.save(group);
+		Chamado result = groupRepository.save(group);
 		return ResponseEntity.ok().body(result);
 	}
 
