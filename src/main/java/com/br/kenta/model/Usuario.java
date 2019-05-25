@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @NoArgsConstructor
 @AllArgsConstructor

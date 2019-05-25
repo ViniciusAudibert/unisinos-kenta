@@ -1,8 +1,6 @@
 package com.br.kenta.model;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.File;
@@ -13,8 +11,10 @@ import java.util.Date;
 
 @Data
 @NoArgsConstructor
-@RequiredArgsConstructor
+@AllArgsConstructor
 @Entity
+@Getter
+@Setter
 @Table(name = "chamado")
 public class Chamado {
 
@@ -26,10 +26,14 @@ public class Chamado {
     private Date dataAbertura;
 
     @ManyToOne
-    private Usuario abertoPor;
+    private Cliente abertoPor;
 
+    @ManyToOne
     private Produto produto;
+
+    @ManyToOne
     private Suporte responsavel;
+
     private String categoria;
     private int origemRequisicao;
     private String descricao;

@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Data
@@ -15,6 +17,10 @@ import javax.persistence.Table;
 @Builder
 @Table(name = "cliente")
 public class Cliente extends Usuario {
+    @Id
+    @GeneratedValue
+    private Long id;
+
     private String cnpj;
     private String razaoSocial;
     private String endereco;

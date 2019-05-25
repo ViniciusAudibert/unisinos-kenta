@@ -1,5 +1,6 @@
 package com.br.kenta.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
@@ -9,7 +10,7 @@ import java.util.Date;
 
 @Data
 @NoArgsConstructor
-@RequiredArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "produto")
 public class Licenca {
@@ -22,6 +23,7 @@ public class Licenca {
 
     @ManyToOne
     private Produto produto;
+
     private int nroSerie;
 
     @Temporal(TemporalType.DATE)

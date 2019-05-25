@@ -1,8 +1,8 @@
 package com.br.kenta.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 
 import javax.persistence.*;
 import java.io.File;
@@ -13,7 +13,7 @@ import java.util.Date;
 
 @Data
 @NoArgsConstructor
-@RequiredArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "gravacao")
 public class Gravacao {
@@ -26,7 +26,7 @@ public class Gravacao {
     private Date data;
 
     @ManyToOne
-    private Usuario cliente;
+    private Cliente cliente;
 
     private byte[] gravacao;
 
