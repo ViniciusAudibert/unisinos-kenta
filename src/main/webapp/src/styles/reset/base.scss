@@ -1,33 +1,6 @@
-* {
-  &,
-  &:before,
-  &:after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-}
-
 html,
 body {
-  line-height: 1;
-  height: 100%;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
-  font-weight: 300;
-}
-
-ul {
-  > li,
-  > ol {
-    list-style: none;
-  }
+  height: 100vh;
 }
 
 svg {

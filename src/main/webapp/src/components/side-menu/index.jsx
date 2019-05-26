@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import './style.scss'
 
 const MENU = [
@@ -30,7 +30,7 @@ const MENU = [
   },
   {
     label: 'Sair',
-    link: '/',
+    link: '/logout',
     icon: 'fa-power-off',
   },
 ]
@@ -46,7 +46,7 @@ export class SideMenu extends Component {
             {MENU.map((option, index) => {
               const { icon, label, link } = option
               return (
-                <li key={`side-menu-item-${index}`} className="side-menu-item"><Link className="link" to={link}><i className={`icon fas ${icon}`} />{label}</Link></li>
+                <li key={`side-menu-item-${index}`} className="side-menu-item"><NavLink activeClassName="-active" exact={true} className="link" to={link}><i className={`icon fas ${icon}`} />{label}</NavLink></li>
               )
             })}
           </ul>

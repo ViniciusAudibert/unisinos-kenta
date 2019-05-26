@@ -1,6 +1,7 @@
+import './App.scss'
+
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import './App.scss'
 import { Home } from './components/home'
 import { Suporte } from './components/suporte'
 import { Cliente } from './components/cliente'
