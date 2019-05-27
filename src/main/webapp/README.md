@@ -1,68 +1,41 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Como iniciar o projeto
 
-## Available Scripts
+### Requisitos para instalar
 
-In the project directory, you can run:
+* Instalar [Node](https://nodejs.org/en) Versão **10 LTS**
 
-### `npm start`
+* Instalar [Yarn](https://yarnpkg.com/pt-BR/docs/install#windows-stable)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* Instalar [Java JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+* Recomendado utilizar [Visual Studio Code](https://code.visualstudio.com/download) para desenvolver o **front-end**
 
-### `npm test`
+* Recomendado utilizar [IntelliJ IDEA](https://www.jetbrains.com/idea/download/#section=windows) para desenvolver o **back-end**
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  ### Iniciar projeto
 
-### `npm run build`
+  A instalação do back-end e front-end podem ser realizadas simultaneamente
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  ---------------------------------------------------------------------
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+  #### Back-end
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  Abrir o **IntelliJ** e clicar em importar projeto do tipo **Maven** e aguardar instalar dependências (é automático). *Para saber se está baixando  e instalando as dependências é só observar na parte inferior central da tela mais ou menos vai estar escrito algo como Carregando*
 
-### `npm run eject`
+  Na parte superior direita existe um ícone de *martelo* e logo na direita um campo de seleção, clique nele e depois **edit-configurations**. Clique no **+** e selecione *Maven*, dê um nome para poder identificar apenas e adicione em *Command Line* `spring-boot:run` e por fim *OK*
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  No campo de seleção que acabou de selecionar **edit-configurations** selecione a configuração que foi criada.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  Para rodar o projeto clique no ícone de *play*
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  #### Front-end
 
-## Learn More
+  Abrir **Visual Studio Code**, abrir diretório `src\main\webapp` 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  Abrir um **Terminal** na pasta `src\main\webapp` digitar `yarn` e aguardar terminar
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  Digite `yarn start` para iniciar
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+  
