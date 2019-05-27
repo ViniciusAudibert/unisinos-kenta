@@ -1,41 +1,17 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { Link, NavLink } from 'react-router-dom'
 import './style.scss'
 
-const MENU = [
-  {
-    label: 'Início',
-    link: '/',
-    icon: 'fa-home',
-  },
-  {
-    label: 'Administração',
-    link: '/administração',
-    icon: 'fa-user-tie',
-  },
-  {
-    label: 'Suporte',
-    link: '/suporte',
-    icon: 'fa-users-cog',
-  },
-  {
-    label: 'Cliente',
-    link: '/cliente',
-    icon: 'fa-users',
-  },
-  {
-    label: 'Cadastro',
-    link: '/cadastro',
-    icon: 'fa-user-plus',
-  },
-  {
-    label: 'Sair',
-    link: '/logout',
-    icon: 'fa-power-off',
-  },
-]
-
 export class SideMenu extends Component {
+  static propTypes = {
+    items: PropTypes.arrayOf(PropTypes.shape({
+      icon: PropTypes.string,
+      link: PropTypes.string,
+      label: PropTypes.string,
+    }))
+  }
+
   render() {
     return (
       <aside className="side-menu">
@@ -43,10 +19,15 @@ export class SideMenu extends Component {
           <ul className="side-menu-list">
             <li className="side-menu-item"><Link className="link" to="/">Kenta</Link></li>
 
-            {MENU.map((option, index) => {
+            {this.props.items.map((option, index) => {
               const { icon, label, link } = option
               return (
-                <li key={`side-menu-item-${index}`} className="side-menu-item"><NavLink activeClassName="-active" exact={true} className="link" to={link}><i className={`icon fas ${icon}`} />{label}</NavLink></li>
+                <li key={`side-menu-item-${index}`} className="side-menu-item">
+                  <NavLink activeClassName="-active" exact={true} className="link" to={link}>
+                    <i className={`icon fas ${icon}`} />
+                    {label}
+                  </NavLink>
+                </li>
               )
             })}
           </ul>

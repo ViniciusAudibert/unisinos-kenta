@@ -1,0 +1,37 @@
+$cards-bg: #787d89;
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  > .item {
+    display: flex;
+    flex: 0 50%;
+    width: 100%;
+
+    > .link {
+      background-color: $cards-bg;
+      flex: 1;
+      margin: 20px 40px;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 0;
+      font-size: 1.4rem;
+      width: 40px;
+
+      &:hover {
+        background-color: darken($cards-bg, 15);
+      }
+
+      > .icon {
+        font-size: 3.7rem;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
